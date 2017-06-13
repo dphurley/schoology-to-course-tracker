@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "jasmine"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -20,9 +20,7 @@
   },
   "devDependencies": {
     "jasmine-core": "^2.6.3",
-    "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4"
+    "jasmine-supertest": "^1.0.0",
+    "supertest": "^3.0.0"
   }
 }
