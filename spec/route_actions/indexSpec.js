@@ -1,6 +1,8 @@
+'use strict';
+
 const request = require('supertest');
 const finishTestcase = require('jasmine-supertest');
-let server = null;
+let server;
 
 const path = require('path');
 const indexActions = require(path.join(__dirname, '../..', 'route_actions', 'index'));
@@ -8,7 +10,7 @@ const indexActions = require(path.join(__dirname, '../..', 'route_actions', 'ind
 describe('when the index route loads', () => {
 
   beforeEach(() => {
-    server = require(__dirname + '/../../bin/www', { bustCache: true });
+    server = require(__dirname + '/../../bin/www');
 
     process.env.SCHOOLOGY_CONSUMER_KEY = 'KEY';
     process.env.SCHOOLOGY_CONSUMER_SECRET = 'SHHH ITS A SECRET';
